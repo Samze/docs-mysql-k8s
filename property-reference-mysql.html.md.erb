@@ -181,7 +181,7 @@ The table below explains the properties that you can set in your MySQL resource.
   <td>No</td>
 </tr>
 <tr>
-  <td><code>spec.resources.router</code></td>
+  <td><code>spec.resources.proxy</code></td>
   <td>
     <ul>
       <li>limits.cpu</li>
@@ -189,7 +189,7 @@ The table below explains the properties that you can set in your MySQL resource.
     </ul>
   </td>
   <td>Best effort</td>
-  <td>Describes the maximum CPU and memory allowed for the router container. This container is only created when
+  <td>Describes the maximum CPU and memory allowed for the container on the proxy pod. This container is only created when
       <code>spec.highAvailability.enabled</code> is specified as <code>true</code>.
       If left blank, Kubernetes does its best effort to allocate the necessary compute resources
       for the router container.
@@ -201,7 +201,7 @@ The table below explains the properties that you can set in your MySQL resource.
   <td>No</td>
 </tr>
 <tr>
-  <td><code>spec.resources.router</code></td>
+  <td><code>spec.resources.proxy</code></td>
   <td>
     <ul>
       <li>requests.cpu</li>
@@ -209,7 +209,7 @@ The table below explains the properties that you can set in your MySQL resource.
     </ul>
   </td>
   <td>Best effort</td>
-  <td>Describes the minimum CPU and memory allowed for the sidecar container. This container is only created when
+  <td>Describes the minimum CPU and memory allowed for the container on the proxy pod. This container is only created when
       <code>spec.highAvailability.enabled</code> is specified as <code>true</code>.
       If left blank, it defaults to limits if limits have been explicitly specified.
       For more information about limits, see the
